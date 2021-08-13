@@ -8,7 +8,11 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+  if (!arr) return arr; // пустой массив
+
+  return arr.filter((num, position) => {
+    return arr.indexOf(num) === position;
+  });
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

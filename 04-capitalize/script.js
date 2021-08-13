@@ -7,7 +7,17 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+  if (!str) return str; // пустая строка
+  
+  const arr = str.split(' ');
+
+  arr.forEach((word, index) => {
+    if (word) {
+      arr[index] = word[0].toUpperCase() + word.slice(1);
+    }
+  });
+
+  return arr.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

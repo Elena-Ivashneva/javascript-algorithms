@@ -9,7 +9,19 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
+  if (!str1 && !str2) return false; // пустые строки
+
+  if (str1.length !== str2.length) return false;
+
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+
+  if (str1 === str2) return false; // одинаковые слова
+
+  str1 = str1.split('').sort().join('');
+  str2 = str2.split('').sort().join('');
+
+  return str1 === str2;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

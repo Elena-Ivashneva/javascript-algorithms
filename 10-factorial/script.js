@@ -8,7 +8,15 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+  if (n < 0 || !Number.isInteger(n)) return undefined;
+
+  let factorial = 1;
+
+  for (let i = 2; i <= n; i++) {
+    factorial *= i;
+  }
+
+  return factorial;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
